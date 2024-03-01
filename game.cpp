@@ -46,6 +46,11 @@ namespace Tmpl8
 			ballPos.x = (ScreenWidth - 1.0f) - BALL_RADIUS.x;
 			ballVel.x *= -0.9f;
 		}
+		if (ballPos.x - BALL_RADIUS.x <= 0)
+		{
+			ballPos.x = (0 + 1.0f) + BALL_RADIUS.x;
+			ballVel.x *= -0.9f;
+		}
 
 		// Render the game.
 		// clear the graphics window
